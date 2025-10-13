@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\etl",
+    "\\etl\\ssis",
+    "\\etl\\ssis\\etl_encuestas",
+    "\\etl\\ssis\\etl_encuestas\\etl_encuestas"
   ],
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\etl\\ssis\\etl_encuestas\\etl_encuestas\\etl_encuestas.dtsx",
+  "PreviewInSolutionExplorer": true
 }
