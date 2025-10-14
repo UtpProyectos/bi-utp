@@ -1,27 +1,46 @@
+Ôªø/* ===========================================================
+   CREACI√ìN COMPLETA DE BASE DE DATOS ODS (versi√≥n modificada)
+   Autor: Pollito Crack üê£
+   Fecha: 2025-10-13
+   =========================================================== */
+
+-- 1Ô∏è‚É£ CREAR BASE DE DATOS
+IF DB_ID('ODS') IS NOT NULL
+BEGIN
+    ALTER DATABASE ODS SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE ODS;
+END
+GO
+
 CREATE DATABASE ODS;
 GO
 
 USE ODS;
 GO
 
+
 /* ===========================================================
    DIMENSIONES
    =========================================================== */
 
--- DimensiÛn Estudiantes
+-- ======================================
+-- DIM_ESTUDIANTES
+-- ======================================
 CREATE TABLE dbo.dim_estudiantes (
-    estudiante_id     INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_estudiante   VARCHAR(20)  NOT NULL,
-    nombre            VARCHAR(100) NOT NULL,
-    apellidos         VARCHAR(150) NOT NULL,
-    carrera           VARCHAR(150) NULL,
-    ciclo             INT NULL,
-    periodo           VARCHAR(20) NULL,
-    universidad       VARCHAR(200) NULL
+    estudiante_id      INT IDENTITY(1,1) PRIMARY KEY,
+    codigo_estudiante  VARCHAR(20)  NOT NULL,
+    nombre             VARCHAR(100) NOT NULL,
+    apellidos          VARCHAR(150) NOT NULL,
+    carrera            VARCHAR(150) NULL,
+    ciclo              INT NULL,
+    periodo            VARCHAR(20) NULL,
+    universidad        VARCHAR(200) NULL
 );
 GO
 
--- DimensiÛn Cursos
+-- ======================================
+-- DIM_CURSOS
+-- ======================================
 CREATE TABLE dbo.dim_cursos (
     curso_id        INT IDENTITY(1,1) PRIMARY KEY,
     codigo_curso    VARCHAR(20)  NOT NULL,
@@ -31,7 +50,9 @@ CREATE TABLE dbo.dim_cursos (
 );
 GO
 
--- DimensiÛn Profesores
+-- ======================================
+-- DIM_PROFESORES
+-- ======================================
 CREATE TABLE dbo.dim_profesores (
     profesor_id       INT IDENTITY(1,1) PRIMARY KEY,
     codigo_docente    VARCHAR(20)  NOT NULL,
@@ -41,7 +62,9 @@ CREATE TABLE dbo.dim_profesores (
 );
 GO
 
--- DimensiÛn Secciones
+-- ======================================
+-- DIM_SECCIONES
+-- ======================================
 CREATE TABLE dbo.dim_secciones (
     seccion_id    INT IDENTITY(1,1) PRIMARY KEY,
     curso_id      INT NOT NULL,
@@ -53,25 +76,13 @@ CREATE TABLE dbo.dim_secciones (
 );
 GO
 
--- DimensiÛn Preguntas de Encuestas
+-- ======================================
+-- DIM_PREGUNTA_ENCUESTA (modificada)
+-- ======================================
 CREATE TABLE dbo.dim_pregunta_encuesta (
-    pregunta_id        INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_pregunta    VARCHAR(20) NOT NULL,
-    pregunta_texto     VARCHAR(500) NOT NULL,
-    dimension          VARCHAR(100) NULL,
-    escala             VARCHAR(50) NULL,
-    vigente_flag       BIT NOT NULL DEFAULT 1,
-    fecha_creacion     DATETIME NULL,
-    fecha_actualizacion DATETIME NULL
-);
-GO
-
--- DimensiÛn Tipo de Encuestas
-CREATE TABLE dbo.dim_tipo_encuesta (
-    tipo_encuesta_id    INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_tipo         VARCHAR(20) NOT NULL,
-    nombre_tipo         VARCHAR(200) NOT NULL,
-    descripcion         VARCHAR(200) NULL,
+    pregunta_id         VARCHAR(20) PRIMARY KEY,      -- cambiado de INT a VARCHAR
+    pregunta_texto      VARCHAR(500) NOT NULL,
+    dimension           VARCHAR(100) NULL,
     escala              VARCHAR(50) NULL,
     vigente_flag        BIT NOT NULL DEFAULT 1,
     fecha_creacion      DATETIME NULL,
@@ -79,25 +90,25 @@ CREATE TABLE dbo.dim_tipo_encuesta (
 );
 GO
 
--- ===========================================================
--- DIM_DATE (versiÛn con date_id = yyyymmdd)
--- ===========================================================
 
+-- ======================================
+-- DIM_DATE (versi√≥n YYYYMMDD)
+-- ======================================
 CREATE TABLE dbo.dim_date (
-    date_id          INT NOT NULL PRIMARY KEY,  -- formato YYYYMMDD (ej: 20251011)
+    date_id          INT NOT NULL PRIMARY KEY,  -- formato YYYYMMDD (ej: 20251013)
     fecha            DATE NOT NULL,
-    aÒo              INT NOT NULL,
+    a√±o              INT NOT NULL,
     mes              INT NOT NULL,
     mes_nombre       VARCHAR(20) NOT NULL,
     trimestre        INT NOT NULL,
-    semana_aÒo       INT NOT NULL,
+    semana_a√±o       INT NOT NULL,
     dia_mes          INT NOT NULL,
     dia_semana       INT NOT NULL,
     nombre_dia       VARCHAR(20) NOT NULL,
     es_fin_semana    BIT NOT NULL,
     es_feriado       BIT NOT NULL DEFAULT 0,
     ciclo_academico  VARCHAR(20) NULL,
-    aÒo_academico    INT NULL
+    a√±o_academico    INT NULL
 );
 GO
 
@@ -107,27 +118,32 @@ GO
    TABLAS DE HECHOS
    =========================================================== */
 
--- Hechos de MatrÌculas
+-- ======================================
+-- FACT_MATRICULAS
+-- ======================================
 CREATE TABLE dbo.fact_matriculas (
-    matricula_id    INT IDENTITY(1,1) PRIMARY KEY,
-    estudiante_id   INT NOT NULL,
-    seccion_id      INT NOT NULL,
-    periodo         VARCHAR(100) NULL,
-    estado_matricula VARCHAR(50) NULL,
-    fecha_matricula  DATE NULL,
-    fecha_carga      DATETIME NOT NULL DEFAULT GETDATE(),
-    origen_fuente   VARCHAR(255) NULL, -- agregado seg˙n tu indicaciÛn
+    matricula_id      INT IDENTITY(1,1) PRIMARY KEY,
+    estudiante_id     INT NOT NULL,
+    seccion_id        INT NOT NULL,
+    periodo           VARCHAR(100) NULL,
+    estado_matricula  VARCHAR(50) NULL,
+    fecha_matricula   DATE NULL,
+    fecha_carga       DATETIME NOT NULL DEFAULT GETDATE(),
+    origen_fuente     VARCHAR(255) NULL,
     FOREIGN KEY (estudiante_id) REFERENCES dbo.dim_estudiantes(estudiante_id),
     FOREIGN KEY (seccion_id) REFERENCES dbo.dim_secciones(seccion_id)
 );
 GO
 
--- Hechos de Notas
+
+-- ======================================
+-- FACT_NOTAS
+-- ======================================
 CREATE TABLE dbo.fact_notas (
-    nota_id          INT IDENTITY(1,1) PRIMARY KEY,
-    estudiante_id    INT NOT NULL,
-    seccion_id       INT NOT NULL,
-    date_id          INT NOT NULL,
+    nota_id           INT IDENTITY(1,1) PRIMARY KEY,
+    estudiante_id     INT NOT NULL,
+    seccion_id        INT NOT NULL,
+    date_id           INT NOT NULL,
     evaluacion_codigo VARCHAR(50) NULL,
     nota_obtenida     DECIMAL(5,2) NULL,
     nota_ponderada    DECIMAL(5,2) NULL,
@@ -140,34 +156,42 @@ CREATE TABLE dbo.fact_notas (
 );
 GO
 
--- ===========================================================
--- FACT_ENCUESTAS (versiÛn corregida)
--- ===========================================================
 
+-- ======================================
+-- FACT_ENCUESTAS (modificada y unificada con tipo_encuesta)
+-- ======================================
 CREATE TABLE dbo.fact_encuestas (
-    encuesta_id   INT IDENTITY(1,1) PRIMARY KEY,
+    encuesta_id        INT IDENTITY(1,1) PRIMARY KEY,
+
+    -- Relaciones
     seccion_id         INT NOT NULL,
-    pregunta_id        INT NOT NULL,
-    tipo_encuesta_id   INT NOT NULL,
-    date_id            INT NOT NULL,   -- FK a dim_date.date_id
+    pregunta_id        VARCHAR(20) NOT NULL,     -- ahora VARCHAR (FK a dim_pregunta_encuesta)
+    date_id            INT NOT NULL,             -- FK a dim_date
+
+    -- Campos unificados desde dim_tipo_encuesta
+    codigo_tipo        VARCHAR(20) NULL,
+    nombre_tipo        VARCHAR(200) NULL,
+    descripcion_tipo   VARCHAR(200) NULL,
+
+    -- M√©tricas de resultados
     score_avg          DECIMAL(5,2) NULL,
     n_respuestas       INT NULL,
     score_min          DECIMAL(5,2) NULL,
     score_max          DECIMAL(5,2) NULL,
     std_dev            DECIMAL(6,3) NULL,
+
+    -- Metadata
     fecha_carga        DATETIME NOT NULL DEFAULT GETDATE(),
-    origen_fuente      VARCHAR(50) NULL, 
+    origen_fuente      VARCHAR(50) NULL,
+
+    -- Claves externas
     CONSTRAINT FK_fact_encuestas_dim_secciones
         FOREIGN KEY (seccion_id) REFERENCES dbo.dim_secciones(seccion_id),
 
     CONSTRAINT FK_fact_encuestas_dim_pregunta_encuesta
         FOREIGN KEY (pregunta_id) REFERENCES dbo.dim_pregunta_encuesta(pregunta_id),
 
-    CONSTRAINT FK_fact_encuestas_dim_tipo_encuesta
-        FOREIGN KEY (tipo_encuesta_id) REFERENCES dbo.dim_tipo_encuesta(tipo_encuesta_id),
-
     CONSTRAINT FK_fact_encuestas_dim_date
         FOREIGN KEY (date_id) REFERENCES dbo.dim_date(date_id)
 );
 GO
- 

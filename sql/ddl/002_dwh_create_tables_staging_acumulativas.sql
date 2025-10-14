@@ -2,8 +2,8 @@
 CREATE TABLE [dbo].[tipo_encuesta](
 	[codigo_tipo] Nvarchar(255) NOT NULL,
 	[vigente_flag] FLOAT NOT NULL,
-	[fecha_creacion] Nvarchar(50) NOT NULL,
-	[nombre_tipo] NVARCHAR(50) NULL,
+	[fecha_creacion] Nvarchar(255) NOT NULL,
+	[nombre_tipo] NVARCHAR(255) NULL,
 	[descripcion] NVARCHAR(255) NULL,
 	[escala_default] NVARCHAR(255) NOT NULL, 
 ) 
