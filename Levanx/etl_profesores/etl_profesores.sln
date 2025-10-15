@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "etl_profesores", "etl_profesores\etl_profesores.dtproj", "{1EF67F2D-70CD-89A9-7172-F359CF0C0E61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EF67F2D-70CD-89A9-7172-F359CF0C0E61}.Development|Default.ActiveCfg = Development
+		{1EF67F2D-70CD-89A9-7172-F359CF0C0E61}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B54F4F84-0B79-460E-8D7D-F11C88D6DCB4}
+	EndGlobalSection
+EndGlobal

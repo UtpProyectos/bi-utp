@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="44.198.236.39.DB_SIS_UTP.leo"
+  DTS:DTSID="{0FFBC76D-41EB-42A5-A03F-36B19D77B821}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=44.198.236.39;User ID=leo;Initial Catalog=DB_SIS_UTP;Persist Security Info=True;Encrypt=False;TrustServerCertificate=True;Application Name=SSIS-etl_profesores-{0FFBC76D-41EB-42A5-A03F-36B19D77B821}44.198.236.39.DB_SIS_UTP.leo;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAU7NIdR6M+kOKkOUtPAe5hwAAAAACAAAAAAAQZgAAAAEAACAAAADKnLNeIbJtP0GS05KEi3n71St921w+vLubi8WRkdKS7AAAAAAOgAAAAAIAACAAAADo/mAnHF9ZGGRXzp4Ap7XjQvvR7TKED+w+lyI1UhVM0YAAAAB7KeszbHFoBYY1tcrKI58k3kUvMDMqmwP4OmeTvVOSbvoHeZRxjx2WTwQ8I3Kloqz6dB0tEzONJ1rxqbIaYm9G+RfvuWrSdXaRMHalbZDya55MTYm+dRy8DVu++G+X8AOdV7pUo+LKYb/9X9zTiUBBUNeUr58Np/wY4VYC0zU870AAAACM/1hg4BUktaIdwlhui/TMu33QthmNkFnVRzXjZnSD9J5DybnxkTSlCPKBMmVKlNBNdaK5fYEd6N0bzqO16LBr</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
