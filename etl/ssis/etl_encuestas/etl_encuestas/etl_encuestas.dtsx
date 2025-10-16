@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="etl_encuestas"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{12664645-3BAC-4127-94BB-B0DC5CD42368}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{109AFEAC-F62B-459C-AC69-A74182D01D17}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,7 +41,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMsj9enkwrESErxLwPmS9wAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB6CDW1ug/xGfsXZDkBfatYTYWTdgG9P+NlVtmSamXL8gAAAAAOgAAAAAIAACAAAAC2+CBQx0vwjkehIdOERFW/0yx7oZkQW0UONmPkJy/qjBAAAAAziRjQuWsJ2XsMsj9REwH8QAAAANs1EBFX8vRLpIj31vf9eG3H4w7injIDMrB1oiJjCFCD6rzChMYWlGREk25SFkGJefkANW/JUGA//oB3kiIIah4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMsj9enkwrESErxLwPmS9wAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvm+BgeE1vFdiIjRzqixM4awXfmpxX8inn5dNmuVtY/wAAAAAOgAAAAAIAACAAAAD7S/MWYvmrE6dlkB2shzmiJX86fAcqfi226Y7UjgcbIhAAAAAiQ+9UDO9tT3AVUUVUPNs+QAAAAHUvzXqlh9PC0JiLQ8jWCfRyXqz+dBGTc6+2+T71kMoKDxgjxix6b5Pa8ygOYxao6QwURJcP4F785GUpodgzm74</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -58,7 +58,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMsj9enkwrESErxLwPmS9wAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABp1sfgaiKQLbCNe5Hb7R5DQEP+21IwL37yOT6/EWfeOwAAAAAOgAAAAAIAACAAAACIZy/spIlQfYy5Ae61TXeCbo5KE1stOdkhKY67f64NohAAAABljt6EfbwHw2uDtj3hBT81QAAAAI7hXoa+YUM4zUMFAvQQIVgmhePA5yyWQBETy3XBqUZxKDThfvkowPq2b38ZXOgl61ZlcD+TrzVqnSm7UwrGMmE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMsj9enkwrESErxLwPmS9wAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAiPIng3AEruouU5AgQwoaoT/UAxUtiGivVregG5ao97wAAAAAOgAAAAAIAACAAAAAEDgmdJjeCww/RMpRWAr6cNbQTpLPkZS7VozlO69U5mhAAAADPVxISCUXh6DtvQhPToSW7QAAAAAT9HafllzHm1IVuL8/VAoI0hJdy5+y+twCDnEAPODek8VZ7nIHHCAgnm0CR4+7gcO3hissVIPl/kt/ovdsBvQk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8652,23 +8652,6 @@
                       externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_actualizacion]"
                       lineageId="Package\DF_PREGUNTA_DWH\Fecha Actualización.Outputs[Derived Column Output].Columns[Fecha_Actualizacion]" />
                     <inputColumn
-                      refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[codigo_pregunta_str]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="codigo_pregunta_str"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pregunta_id]"
-                      lineageId="Package\DF_PREGUNTA_DWH\Sort.Outputs[Sort Output].Columns[codigo_pregunta_str]" />
-                    <inputColumn
-                      refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pregunta_texto_str]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="500"
-                      cachedName="pregunta_texto_str"
-                      externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pregunta_texto]"
-                      lineageId="Package\DF_PREGUNTA_DWH\Sort.Outputs[Sort Output].Columns[pregunta_texto_str]" />
-                    <inputColumn
                       refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dimension_str]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -8697,6 +8680,23 @@
                       cachedName="fecha_creacion_date"
                       externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_creacion]"
                       lineageId="Package\DF_PREGUNTA_DWH\Sort.Outputs[Sort Output].Columns[fecha_creacion_date]" />
+                    <inputColumn
+                      refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[codigo_pregunta_str]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="codigo_pregunta_str"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pregunta_id]"
+                      lineageId="Package\DF_PREGUNTA_DWH\Sort.Outputs[Sort Output].Columns[codigo_pregunta_str]" />
+                    <inputColumn
+                      refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pregunta_texto_str]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="pregunta_texto_str"
+                      externalMetadataColumnId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pregunta_texto]"
+                      lineageId="Package\DF_PREGUNTA_DWH\Sort.Outputs[Sort Output].Columns[pregunta_texto_str]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8726,7 +8726,7 @@
                       name="escala" />
                     <externalMetadataColumn
                       refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vigente_flag]"
-                      dataType="i4"
+                      dataType="bool"
                       name="vigente_flag" />
                     <externalMetadataColumn
                       refId="Package\DF_PREGUNTA_DWH\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_creacion]"
@@ -9543,7 +9543,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{9A267EF6-5D42-4559-B4B5-FEE83CB9A374}"
-          SQLTask:SqlStatementSource="&#xA;DELETE DWH FROM dbo.dim_pregunta_encuesta DWH&#xA;JOIN STAGING.dbo.pregunta_encuesta STG&#xA;ON DWH.pregunta_id=STG.codigo_pregunta;&#xA;&#xA;DELETE DWH FROM [dbo].[fact_encuestas] DWH&#xA;LEFT JOIN STAGING.DBO.encuesta_resultado STG&#xA;ON DWH.codigo_tipo=STG.codigo_tipo AND &#xA;&#x9;DWH.seccion_id=STG.codigo_seccion AND &#xA;&#x9;DWH.pregunta_id=STG.codigo_pregunta AND &#xA;&#x9;DWH.date_id=FORMAT(CONVERT(DATE,STG.fecha_aplicacion),'yyyyMMdd')&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;DELETE DWH FROM dbo.dim_pregunta_encuesta DWH&#xA;JOIN STAGING.dbo.pregunta_encuesta STG&#xA;ON DWH.pregunta_id=STG.codigo_pregunta;&#xA;&#xA;DELETE DWH FROM [dbo].[fact_encuestas] DWH&#xA;JOIN STAGING.DBO.encuesta_resultado STG&#xA;ON DWH.codigo_tipo=STG.codigo_tipo AND &#xA;&#x9;DWH.seccion_id=STG.codigo_seccion AND &#xA;&#x9;DWH.pregunta_id=STG.codigo_pregunta AND &#xA;&#x9;DWH.date_id=FORMAT(CONVERT(DATE,STG.fecha_aplicacion),'yyyyMMdd')&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -9618,6 +9618,10 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="126,42"
+          Id="Package\DF_DWH"
+          TopLeft="522.333333333333,312.222222222222" />
+        <NodeLayout
           Size="112,42"
           Id="Package\DF_L0"
           TopLeft="313,29" />
@@ -9626,6 +9630,14 @@
           Id="Package\DF_L1"
           TopLeft="460,94" />
         <NodeLayout
+          Size="193,42"
+          Id="Package\DF_PREGUNTA_DWH"
+          TopLeft="486,230" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\GENERAR CALENDARIO"
+          TopLeft="282,162" />
+        <NodeLayout
           Size="139,42"
           Id="Package\TRUNCATE"
           TopLeft="136,27" />
@@ -9633,6 +9645,10 @@
           Size="124,42"
           Id="Package\UPSERT"
           TopLeft="308,98" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\UPSERT DWH"
+          TopLeft="296,228" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="275,49">
@@ -9699,66 +9715,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="126,42"
-          Id="Package\DF_DWH"
-          TopLeft="522.333333333333,312.222222222222" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\DF_PREGUNTA_DWH"
-          TopLeft="486,230" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="583.916666666667,272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.2222222222222"
-              Start="0,0"
-              End="0,32.7222222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.7222222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="153,42"
-          Id="Package\UPSERT DWH"
-          TopLeft="296,228" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 5]"
-          TopLeft="449,250">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37,0"
-              Start="0,0"
-              End="29.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,42"
-          Id="Package\GENERAR CALENDARIO"
-          TopLeft="282,162" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="516,136">
@@ -9785,6 +9741,50 @@
                     Point3="-130,17" />
                   <mssgle:LineSegment
                     End="-130,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="583.916666666667,272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.222222222222"
+              Start="0,0"
+              End="0,32.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 5]"
+          TopLeft="449,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,0"
+              Start="0,0"
+              End="29.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9831,10 +9831,460 @@
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\DF_DWH">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\DF_DWH\Sort"
+          TopLeft="431.444444444444,333.666666666667" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\DF_DWH\dim_date"
+          TopLeft="555.111111111111,131.444444444444" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DF_DWH\Limpieza Nulos"
+          TopLeft="106.222222222222,123.777777777778" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DF_DWH\encuesta_resultado"
+          TopLeft="98,57" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DF_DWH\encuest_resultado_sort"
+          TopLeft="82.4444444444444,258.555555555556" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DF_DWH\OLE DB Destination"
+          TopLeft="467.777777777778,486.888888888889" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\DF_DWH\tipo_encuesta_resultado"
+          TopLeft="287.444444444445,260.444444444444" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\DF_DWH\tipo_encuesta"
+          TopLeft="309.111111111111,54.6666666666667" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DF_DWH\tipo cambio date"
+          TopLeft="538.222222222222,216.888888888889" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\DF_DWH\Data Conversion 1"
+          TopLeft="301.333333333333,129" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\DF_DWH\Merge Join 1"
+          TopLeft="482.444444444444,417.111111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\DF_DWH\Sort 1"
+          TopLeft="562.222222222222,330.888888888889" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\DF_DWH\Merge Join"
+          TopLeft="237.444444444444,330.444444444444" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\DF_DWH\Data Conversion"
+          TopLeft="97.4444444444444,191.555555555556" />
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Data Conversion Output1]"
+          TopLeft="386.638888888889,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.4444444444442"
+              Start="0,0"
+              End="0,81.9444444444442">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.9444444444442" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Data Conversion Output]"
+          TopLeft="178.444444444444,233.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Sort Output3]"
+          TopLeft="616.222222222222,372.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.4444444444445,44.2222222222222"
+              Start="0,0"
+              End="-40.4444444444445,36.7222222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2376973073352" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2376973073352"
+                    Point2="0,26.2376973073352"
+                    Point3="-4,26.2376973073352" />
+                  <mssgle:LineSegment
+                    End="-36.4444444444445,26.2376973073352" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36.4444444444445,26.2376973073352"
+                    Point2="-40.4444444444445,26.2376973073352"
+                    Point3="-40.4444444444445,30.2376973073352" />
+                  <mssgle:LineSegment
+                    End="-40.4444444444445,36.7222222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Sort Output2]"
+          TopLeft="480.944444444444,375.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.1666666666666,41.4444444444445"
+              Start="0,0"
+              End="50.1666666666666,33.9444444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5896007428041" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5896007428041"
+                    Point2="0,24.5896007428041"
+                    Point3="4,24.5896007428041" />
+                  <mssgle:LineSegment
+                    End="46.1666666666666,24.5896007428041" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.1666666666666,24.5896007428041"
+                    Point2="50.1666666666666,24.5896007428041"
+                    Point3="50.1666666666666,28.5896007428041" />
+                  <mssgle:LineSegment
+                    End="50.1666666666666,33.9444444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Sort Output1]"
+          TopLeft="386.944444444445,302.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-62.1666666666668,28.0000000000002"
+              Start="0,0"
+              End="-62.1666666666668,20.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.6002971768203" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.6002971768203"
+                    Point2="0,16.6002971768203"
+                    Point3="-4,16.6002971768203" />
+                  <mssgle:LineSegment
+                    End="-58.1666666666668,16.6002971768203" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-58.1666666666668,16.6002971768203"
+                    Point2="-62.1666666666668,16.6002971768203"
+                    Point3="-62.1666666666668,20.6002971768203" />
+                  <mssgle:LineSegment
+                    End="-62.1666666666668,20.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Sort Output]"
+          TopLeft="178.944444444444,300.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104.166666666667,29.8888888888889"
+              Start="0,0"
+              End="104.166666666667,22.3888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7201584943041" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7201584943041"
+                    Point2="0,17.7201584943041"
+                    Point3="4,17.7201584943041" />
+                  <mssgle:LineSegment
+                    End="100.166666666667,17.7201584943041" />
+                  <mssgle:CubicBezierSegment
+                    Point1="100.166666666667,17.7201584943041"
+                    Point2="104.166666666667,17.7201584943041"
+                    Point3="104.166666666667,21.7201584943041" />
+                  <mssgle:LineSegment
+                    End="104.166666666667,22.3888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[OLE DB Source Output2]"
+          TopLeft="617.666666666667,173.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.4444444444445"
+              Start="0,0"
+              End="0,35.9444444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.9444444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[OLE DB Source Output1]"
+          TopLeft="384.722222222222,96.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.3333333333333"
+              Start="0,0"
+              End="0,24.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[OLE DB Source Output]"
+          TopLeft="184.361111111111,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.7777777777778"
+              Start="0,0"
+              End="0,17.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Merge Join Output1]"
+          TopLeft="554.861111111111,459.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.7777777777778"
+              Start="0,0"
+              End="0,20.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Merge Join Output]"
+          TopLeft="370.444444444444,353.055555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,0"
+              Start="0,0"
+              End="53.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Derived Column Output]"
+          TopLeft="180.583333333333,165.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.7777777777778"
+              Start="0,0"
+              End="0,18.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH.Paths[Data Conversion Output2]"
+          TopLeft="617.222222222222,258.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.9999999999999"
+              Start="0,0"
+              End="0,64.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH\dim_date">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH\encuesta_resultado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH\tipo_encuesta">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\DF_L0">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="186,42"
           Id="Package\DF_L0\OLE DB Destination 2"
@@ -9878,9 +10328,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9914,9 +10362,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9938,9 +10384,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10034,10 +10478,6 @@
           Id="Package\DF_L1\OLE DB Destination"
           TopLeft="447,119" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\DF_L1\tipo_encuesta"
-          TopLeft="168,124" />
-        <NodeLayout
           Size="173,42"
           Id="Package\DF_L1\pregunta_encuesta"
           TopLeft="169,205" />
@@ -10045,6 +10485,52 @@
           Size="186,42"
           Id="Package\DF_L1\OLE DB Destination 1"
           TopLeft="450,195" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\DF_L1\OLE DB Destination 2"
+          TopLeft="449,294" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DF_L1\encuesta_resultado"
+          TopLeft="172,273" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\DF_L1\tipo_encuesta"
+          TopLeft="168,124" />
+        <EdgeLayout
+          Id="Package\DF_L1.Paths[OLE DB Source Output2]"
+          TopLeft="347,294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102,21"
+              Start="0,0"
+              End="94.5,21">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47,0"
+                    Point2="51,0"
+                    Point3="51,4" />
+                  <mssgle:LineSegment
+                    End="51,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51,17"
+                    Point2="51,21"
+                    Point3="55,21" />
+                  <mssgle:LineSegment
+                    End="94.5,21" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_L1.Paths[OLE DB Source Output1]"
           TopLeft="342,226">
@@ -10101,66 +10587,11 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="186,42"
-          Id="Package\DF_L1\OLE DB Destination 2"
-          TopLeft="449,294" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\DF_L1\encuesta_resultado"
-          TopLeft="172,273" />
-        <EdgeLayout
-          Id="Package\DF_L1.Paths[OLE DB Source Output2]"
-          TopLeft="347,294">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="102,21"
-              Start="0,0"
-              End="94.5,21">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="47,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47,0"
-                    Point2="51,0"
-                    Point3="51,4" />
-                  <mssgle:LineSegment
-                    End="51,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51,17"
-                    Point2="51,21"
-                    Point3="55,21" />
-                  <mssgle:LineSegment
-                    End="94.5,21" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DF_L1\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_L1\tipo_encuesta">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10198,498 +10629,21 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DF_DWH">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="148,42"
-          Id="Package\DF_DWH\tipo_encuesta"
-          TopLeft="338,58" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\DF_DWH\encuesta_resultado"
-          TopLeft="98,57" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\DF_DWH\Limpieza Nulos"
-          TopLeft="104,126" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[OLE DB Source Output]"
-          TopLeft="183.25,99">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\DF_DWH\Data Conversion"
-          TopLeft="103,206" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Derived Column Output]"
-          TopLeft="182.25,168">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\DF_DWH\Data Conversion 1"
-          TopLeft="358,149" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[OLE DB Source Output1]"
-          TopLeft="412,100">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="31,49"
-              Start="0,0"
-              End="31,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="4,24.5" />
-                  <mssgle:LineSegment
-                    End="27,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27,24.5"
-                    Point2="31,24.5"
-                    Point3="31,28.5" />
-                  <mssgle:LineSegment
-                    End="31,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="193,42"
-          Id="Package\DF_DWH\encuest_resultado_sort"
-          TopLeft="138,273" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\DF_DWH\tipo_encuesta_resultado"
-          TopLeft="383,266" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\DF_DWH\OLE DB Destination"
-          TopLeft="490,608" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\DF_DWH\dim_date"
-          TopLeft="654,277" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\DF_DWH\Sort 1"
-          TopLeft="610,452" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Data Conversion Output]"
-          TopLeft="183.5,248">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51,25"
-              Start="0,0"
-              End="51,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
-                  <mssgle:LineSegment
-                    End="47,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47,12.5"
-                    Point2="51,12.5"
-                    Point3="51,16.5" />
-                  <mssgle:LineSegment
-                    End="51,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Data Conversion Output1]"
-          TopLeft="443,191">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="39.5,75"
-              Start="0,0"
-              End="39.5,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.5"
-                    Point2="0,37.5"
-                    Point3="4,37.5" />
-                  <mssgle:LineSegment
-                    End="35.5,37.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="35.5,37.5"
-                    Point2="39.5,37.5"
-                    Point3="39.5,41.5" />
-                  <mssgle:LineSegment
-                    End="39.5,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="133,42"
-          Id="Package\DF_DWH\Merge Join"
-          TopLeft="333,376" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Sort Output]"
-          TopLeft="234.5,315">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="165,61"
-              Start="0,0"
-              End="165,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
-                  <mssgle:LineSegment
-                    End="161,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161,30.5"
-                    Point2="165,30.5"
-                    Point3="165,34.5" />
-                  <mssgle:LineSegment
-                    End="165,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Sort Output1]"
-          TopLeft="482.5,308">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-62.1666666666667,68"
-              Start="0,0"
-              End="-62.1666666666667,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.3150074294205" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.3150074294205"
-                    Point2="0,40.3150074294205"
-                    Point3="-4,40.3150074294205" />
-                  <mssgle:LineSegment
-                    End="-58.1666666666667,40.3150074294205" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-58.1666666666667,40.3150074294205"
-                    Point2="-62.1666666666667,40.3150074294205"
-                    Point3="-62.1666666666667,44.3150074294205" />
-                  <mssgle:LineSegment
-                    End="-62.1666666666667,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\DF_DWH\Sort"
-          TopLeft="417,447" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Merge Join Output]"
-          TopLeft="399.5,418">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="67,29"
-              Start="0,0"
-              End="67,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.5"
-                    Point2="0,14.5"
-                    Point3="4,14.5" />
-                  <mssgle:LineSegment
-                    End="63,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="63,14.5"
-                    Point2="67,14.5"
-                    Point3="67,18.5" />
-                  <mssgle:LineSegment
-                    End="67,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_DWH\tipo cambio date"
-          TopLeft="616,378" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[OLE DB Source Output2]"
-          TopLeft="716,319">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-20,59"
-              Start="0,0"
-              End="-20,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="-4,29.5" />
-                  <mssgle:LineSegment
-                    End="-16,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16,29.5"
-                    Point2="-20,29.5"
-                    Point3="-20,33.5" />
-                  <mssgle:LineSegment
-                    End="-20,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Data Conversion Output2]"
-          TopLeft="696,420">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-32,32"
-              Start="0,0"
-              End="-32,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12"
-                    Point2="0,16"
-                    Point3="-4,16" />
-                  <mssgle:LineSegment
-                    End="-28,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-28,16"
-                    Point2="-32,16"
-                    Point3="-32,20" />
-                  <mssgle:LineSegment
-                    End="-32,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\DF_DWH\Merge Join 1"
-          TopLeft="508,516" />
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Sort Output2]"
-          TopLeft="466.5,489">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="112.5,27"
-              Start="0,0"
-              End="112.5,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.5"
-                    Point2="0,13.5"
-                    Point3="4,13.5" />
-                  <mssgle:LineSegment
-                    End="108.5,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="108.5,13.5"
-                    Point2="112.5,13.5"
-                    Point3="112.5,17.5" />
-                  <mssgle:LineSegment
-                    End="112.5,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Sort Output3]"
-          TopLeft="610,473">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.66666666666663,43"
-              Start="0,0"
-              End="-8.66666666666663,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-4.66666666666663,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.66666666666663,0"
-                    Point2="-8.66666666666663,0"
-                    Point3="-8.66666666666663,4" />
-                  <mssgle:LineSegment
-                    End="-8.66666666666663,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH.Paths[Merge Join Output1]"
-          TopLeft="578.75,558">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH\tipo_encuesta">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH\encuesta_resultado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DF_L1\OLE DB Destination 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_L1\tipo_encuesta">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10707,91 +10661,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="173,42"
-          Id="Package\DF_PREGUNTA_DWH\pregunta_encuesta"
-          TopLeft="43,62" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_PREGUNTA_DWH\Limpieza Nuloss"
-          TopLeft="50,138" />
-        <EdgeLayout
-          Id="Package\DF_PREGUNTA_DWH.Paths[OLE DB Source Output]"
-          TopLeft="129.75,104">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\DF_PREGUNTA_DWH\Data Conversion"
-          TopLeft="55,221" />
-        <EdgeLayout
-          Id="Package\DF_PREGUNTA_DWH.Paths[Derived Column Output]"
-          TopLeft="132.75,180">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\DF_PREGUNTA_DWH\Sort"
-          TopLeft="87,299" />
-        <EdgeLayout
-          Id="Package\DF_PREGUNTA_DWH.Paths[Data Conversion Output]"
-          TopLeft="136,263">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="177,42"
+          Id="Package\DF_PREGUNTA_DWH\OLE DB Destination"
+          TopLeft="124,442" />
         <NodeLayout
           Size="177,42"
           Id="Package\DF_PREGUNTA_DWH\Fecha Actualización"
           TopLeft="53,369" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\DF_PREGUNTA_DWH\pregunta_encuesta"
+          TopLeft="43,62" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\DF_PREGUNTA_DWH\Sort"
+          TopLeft="87,299" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DF_PREGUNTA_DWH\Limpieza Nuloss"
+          TopLeft="50,138" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\DF_PREGUNTA_DWH\Data Conversion"
+          TopLeft="55,221" />
         <EdgeLayout
           Id="Package\DF_PREGUNTA_DWH.Paths[Sort Output]"
           TopLeft="139,341">
@@ -10814,10 +10706,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\DF_PREGUNTA_DWH\OLE DB Destination"
-          TopLeft="124,442" />
+        <EdgeLayout
+          Id="Package\DF_PREGUNTA_DWH.Paths[OLE DB Source Output]"
+          TopLeft="129.75,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_PREGUNTA_DWH.Paths[Derived Column Output1]"
           TopLeft="141.5,411">
@@ -10852,6 +10762,50 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_PREGUNTA_DWH.Paths[Derived Column Output]"
+          TopLeft="132.75,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_PREGUNTA_DWH.Paths[Data Conversion Output]"
+          TopLeft="136,263">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -10869,20 +10823,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH\dim_date">
+    design-time-name="Package\DF_PREGUNTA_DWH\pregunta_encuesta">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

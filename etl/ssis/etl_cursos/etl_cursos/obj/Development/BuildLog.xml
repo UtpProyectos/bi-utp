@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
-    <Name>etl_encuestas</Name>
-    <LastWriteTime>2025-10-14T01:47:55.9476419Z</LastWriteTime>
+    <Name>etl_cursos</Name>
+    <LastWriteTime>2025-10-16T06:19:02.8731895Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>etl_encuestas.dtsx</Name>
-      <LastWriteTime>2025-10-16T02:50:46.8270675Z</LastWriteTime>
+      <Name>Package.dtsx</Name>
+      <LastWriteTime>2025-10-16T06:19:42.9318841Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

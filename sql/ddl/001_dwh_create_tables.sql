@@ -3,7 +3,8 @@
    Autor: Pollito Crack 🐣
    Fecha: 2025-10-13
    =========================================================== */
-
+USE STAGING
+DROP DATABASE ODS
 -- 1️⃣ CREAR BASE DE DATOS
 IF DB_ID('ODS') IS NOT NULL
 BEGIN
@@ -27,8 +28,7 @@ GO
 -- DIM_ESTUDIANTES
 -- ======================================
 CREATE TABLE dbo.dim_estudiantes (
-    estudiante_id      INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_estudiante  VARCHAR(20)  NOT NULL,
+    estudiante_id      VARCHAR(20) PRIMARY KEY, 
     nombre             VARCHAR(100) NOT NULL,
     apellidos          VARCHAR(150) NOT NULL,
     carrera            VARCHAR(150) NULL,
@@ -42,8 +42,7 @@ GO
 -- DIM_CURSOS
 -- ======================================
 CREATE TABLE dbo.dim_cursos (
-    curso_id        INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_curso    VARCHAR(20)  NOT NULL,
+    curso_id        VARCHAR(20)  PRIMARY KEY, 
     nombre_curso    VARCHAR(200) NOT NULL,
     descripcion     VARCHAR(200) NULL,
     creditos        INT NOT NULL
@@ -54,8 +53,7 @@ GO
 -- DIM_PROFESORES
 -- ======================================
 CREATE TABLE dbo.dim_profesores (
-    profesor_id       INT IDENTITY(1,1) PRIMARY KEY,
-    codigo_docente    VARCHAR(20)  NOT NULL,
+    profesor_id       VARCHAR(20)  PRIMARY KEY,
     nombre_profesor   VARCHAR(100) NOT NULL,
     apellidos         VARCHAR(150) NOT NULL,
     especialidad      VARCHAR(150) NULL
@@ -66,15 +64,20 @@ GO
 -- DIM_SECCIONES
 -- ======================================
 CREATE TABLE dbo.dim_secciones (
-    seccion_id    INT IDENTITY(1,1) PRIMARY KEY,
-    curso_id      INT NOT NULL,
-    periodo       VARCHAR(100) NOT NULL,
-    universidad   VARCHAR(200) NOT NULL,
-    profesor_id   INT NOT NULL,
-    FOREIGN KEY (curso_id) REFERENCES dbo.dim_cursos(curso_id),
-    FOREIGN KEY (profesor_id) REFERENCES dbo.dim_profesores(profesor_id)
+  seccion_id   INT NOT NULL PRIMARY KEY,   -- sin IDENTITY
+  curso_id     VARCHAR(20)  NOT NULL,
+  periodo      VARCHAR(100) NOT NULL,
+  universidad  VARCHAR(200) NOT NULL,
+  profesor_id  VARCHAR(20)  NOT NULL,
+  campus VARCHAR(20) NOT NULL,
+  CONSTRAINT FK_dim_secciones_dim_cursos
+    FOREIGN KEY (curso_id)    REFERENCES dbo.dim_cursos(curso_id),
+  CONSTRAINT FK_dim_secciones_dim_profesores
+    FOREIGN KEY (profesor_id) REFERENCES dbo.dim_profesores(profesor_id),
+  CONSTRAINT UQ_dim_secciones UNIQUE (curso_id, periodo, universidad, profesor_id),
+  CONSTRAINT CK_dim_secciones_id_pos CHECK (seccion_id > 0)
 );
-GO
+
 
 -- ======================================
 -- DIM_PREGUNTA_ENCUESTA (modificada)
@@ -123,7 +126,7 @@ GO
 -- ======================================
 CREATE TABLE dbo.fact_matriculas (
     matricula_id      INT IDENTITY(1,1) PRIMARY KEY,
-    estudiante_id     INT NOT NULL,
+    estudiante_id     VARCHAR(20) NOT NULL,
     seccion_id        INT NOT NULL,
     periodo           VARCHAR(100) NULL,
     estado_matricula  VARCHAR(50) NULL,
@@ -141,7 +144,7 @@ GO
 -- ======================================
 CREATE TABLE dbo.fact_notas (
     nota_id           INT IDENTITY(1,1) PRIMARY KEY,
-    estudiante_id     INT NOT NULL,
+    estudiante_id     VARCHAR(20) NOT NULL,
     seccion_id        INT NOT NULL,
     date_id           INT NOT NULL,
     evaluacion_codigo VARCHAR(50) NULL,
