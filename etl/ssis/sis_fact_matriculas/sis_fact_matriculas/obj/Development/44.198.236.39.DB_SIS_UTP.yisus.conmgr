@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="44.198.236.39.DB_SIS_UTP.yisus"
+  DTS:DTSID="{9E46F422-14A8-47EE-9611-8BF759CCEF7E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=44.198.236.39;User ID=yisus;Initial Catalog=DB_SIS_UTP;Provider=MSOLEDBSQL.1;Application Name=SSIS-sis_fact_matriculas-{9E46F422-14A8-47EE-9611-8BF759CCEF7E}44.198.236.39.DB_SIS_UTP.yisus;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV0VVeiaVJkCDiRQvuLrZfgAAAAACAAAAAAAQZgAAAAEAACAAAAC0BWwSSLDwzglq/A+OYx/Z8SaluN2vDs3AQU9PNUP0qQAAAAAOgAAAAAIAACAAAADgy9SckZB0DYbgVBSwq6c9pbX6MoM/fIYCVcUi35n5ZYAAAADUzT8/bBSL/1XlY2nO6hZ2FI0gJnvrQ4TKdDVjUtlGnICSaQrQXBi7CQjwF8Ap757y7PYryea19nhP8Tc2wKntcJqDZSEdpkgRDChO/pjy2xZk4R0ZSwJL+wKAZkPLgBgksoHE1p8MOPgrE9Rz7iYRxmhF4Zh1dvLDRjN9LmyrHEAAAADYbhJP80FBXhlU7DLdurtwqe/Ner09hOakVm/ArlOJLXmyFS2XtBMyay0bG/kVV68+tVjApk6WkQc69SBlIO37</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
