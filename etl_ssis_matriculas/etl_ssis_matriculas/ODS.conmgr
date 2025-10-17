@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ODS"
+  DTS:DTSID="{B0CFE4B9-5F6F-4274-8E82-E2B71A5E7787}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=44.198.236.39;User ID=yisus;Initial Catalog=ODS;Encrypt=False;Application Name=SSIS-etl_ssis_matriculas-{B0CFE4B9-5F6F-4274-8E82-E2B71A5E7787}44.198.236.39.ODS.yisus;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV0VVeiaVJkCDiRQvuLrZfgAAAAACAAAAAAAQZgAAAAEAACAAAACF9QbMjrIqQoCG0fNR5ru9cg9+lGyJdQorBE1FANNTMwAAAAAOgAAAAAIAACAAAAAmyji1UTEjPmoGQE6Cf2KHnOnpdoYSu7gHOn0GsUgwOYAAAABqdCkePRyZzfW0MTRilPbS+svnjWdhYnqrtYfBXDe7J4aqpCG+EkQewtZDtQsS06lIraXooFzSZ8U8VPLC6vrxeHApeT6+/S+LszXUWjEfEaAlJG0nbyB3iH110RNcpLDvoiDA1ndqS9XggYfr0otktIKZngYGFUqvFRLjoCEV3UAAAACUn/4+JM2tjha/1hoMe0snw1cpYCrd+2amszL+etK8kTNSJBIP/MnvU3zalYPROcrDGu8n/9VYc/UaXkVRfMlc</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

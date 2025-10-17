@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="STATING"
+  DTS:DTSID="{4C9B0A1A-19A0-424A-9545-62BC3F59DF96}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=44.198.236.39;User ID=yisus;Initial Catalog=STAGING;Persist Security Info=True;Encrypt=False;Application Name=SSIS-etl_ssis_matriculas-{4C9B0A1A-19A0-424A-9545-62BC3F59DF96}44.198.236.39.STAGING.yisus;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV0VVeiaVJkCDiRQvuLrZfgAAAAACAAAAAAAQZgAAAAEAACAAAADwUnxBkf9zaoRlLgi0teB0NB7dyS/GYZxI9PQsUJ/w3gAAAAAOgAAAAAIAACAAAACx0ueNjb3Q07zgUK2pvLJepcAPdocq/qIEwevo+5kH0YAAAAA1YzSl1XlAe6Y2sqC3CXKX6T7hUk/nlbBWiyFHdANZv3uPejKXsyHSTqXbf8lGQF9bkrHqn8GbRPY0g1XB4GDMCLrtuSTd+MOCh2KbBD0+23X8yUiCN4X7jFuOwIn4kcRRcMPrsmMeATyY50hnRylOTxkvWMiWWgowwibBi/+5r0AAAABKKg0YHQhNEjZoTkEoBkDbfTPR/YXnVuz6vbGe9KwJgSH5HVQuGKSpSkkYJO+OqvKIUzqEgLKItR6MgcB/9TtY</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
